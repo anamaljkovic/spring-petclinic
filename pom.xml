@@ -44,6 +44,17 @@
     <tag>v5.0.0</tag>
   </scm>
 
+  <distributionManagement>
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
     <!-- Spring and Spring Boot dependencies -->
     <dependency>
