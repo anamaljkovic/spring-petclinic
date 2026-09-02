@@ -1,5 +1,5 @@
 name: Petclinic Workflow
-run-name: "Petclinic static checks and build (id: ${{ github.run_id }})(branch: ${{ github.ref_name }})(commit: ${{ github.sha }})"
+run-name: "Petclinic static checks and build (id: ${{ github.run_id }})(branch: ${{ github.head_ref || github.ref_name }})(commit: ${{ github.sha }})"
 
 on:
   pull_request:
