@@ -8,14 +8,10 @@ on:
 
 jobs:
   docker-image-main:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: .github/workflows/reusable-docker-build.yml
-        with:
-          dockerHubRepo: main
-          githubSha: ${{ github.sha }}
-        secrets:
-          dockerHubUsername: ${{ secrets.DOCKERHUB_USERNAME }}
-          dockerHubToken: ${{ secrets.DOCKERHUB_TOKEN }}
+    uses: ./.github/workflows/reusable-docker-build.yml
+    with:
+      dockerHubRepo: main
+      githubSha: ${{ github.sha }}
+    secrets:
+      dockerHubUsername: ${{ secrets.DOCKERHUB_USERNAME }}
+      dockerHubToken: ${{ secrets.DOCKERHUB_TOKEN }}
